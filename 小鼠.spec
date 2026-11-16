@@ -2,10 +2,10 @@
 
 
 a = Analysis(
-    ['G:/新建文件夹 (2)/小鼠.py'],
+    ['小鼠.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('C:/Users/28384/AppData/Roaming/Python/Python315/site-packages/customtkinter', 'customtkinter')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -19,20 +19,26 @@ pyz = PYZ(a.pure)
 exe = EXE(
     pyz,
     a.scripts,
-    a.binaries,
-    a.datas,
     [],
+    exclude_binaries=True,
     name='小鼠',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
-    upx_exclude=[],
-    runtime_tmpdir=None,
-    console=True,
+    console=False,
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+)
+coll = COLLECT(
+    exe,
+    a.binaries,
+    a.datas,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    name='小鼠',
 )

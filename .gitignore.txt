@@ -1,0 +1,18 @@
+# 打包生成的垃圾文件
+build/
+dist/
+*.dist/
+*.build/
+*.spec
+*.onefile-build/
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 虚拟环境
+venv/
+.venv/
+
+# 自定义
+ico/
